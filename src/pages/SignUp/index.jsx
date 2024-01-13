@@ -3,11 +3,13 @@ import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import {useState} from "react";
 import {api} from "../../services/api";
+import { useNavigate } from "react-router-dom";
 
 export function SignUp(){
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate()
 
     function handleSignUp(){
         if (!name || !email || !password){
@@ -25,7 +27,7 @@ export function SignUp(){
                 alert ("Não foi possivel cadastrar")
             }
         })
-        console.log(name, email, password)
+        navigate('/')
     }
 
     return(
@@ -55,7 +57,7 @@ export function SignUp(){
          />
 
          <Button onClick={handleSignUp}> Criar conta </Button>
-         <button class="createAccount">Ja tenho uma conta</button>
+         <button class="createAccount" onClick={() => navigate('/')}>Ja tenho uma conta</button>
 
     </Form>
     </Container>
