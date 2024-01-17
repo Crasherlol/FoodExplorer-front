@@ -9,6 +9,7 @@ export default {
       WHITE_100: "#E1E1E6",
       WHITE_200: "#C4C4CC",
       WHITE_500: "#7C7C8A",
+      WHITE_600: "#76797B",
       BLUE_100: "##82F3FF",
       BLACK_100: "#192227",
       BLACK_200: "#00070A",

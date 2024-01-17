@@ -94,7 +94,8 @@ export const Body = styled.div`
         display: flex;
         gap: 2rem;
         align-items: center;
-        justify-content: center;
+        
+
     }
     input[type="number"]{
         background-color: ${({ theme }) => theme.COLORS.BLACK_300};
@@ -111,10 +112,13 @@ export const Body = styled.div`
     height: 3rem;
     text-align: center;
     align-items: center;
-    flex-wrap: wrap;
     display: flex;
     gap: 1rem;
     border-radius: 8px;
+}
+.tagsContainer {
+    width: 100%;
+    height: 3rem;
 }
 .textArea {
     width: 100%;

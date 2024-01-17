@@ -8,7 +8,7 @@ export const Container = styled.div`
    justify-content: space-around;
 
    animation-name: fadeIn;
-  animation-duration: 0.8s;
+  animation-duration: 1s;
 `;
 
 export const Form = styled.form`

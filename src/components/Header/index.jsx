@@ -4,8 +4,10 @@ import {Button} from "../Button"
 import { BsReceiptCutoff } from "react-icons/bs";
 import { PiSignOutLight } from "react-icons/pi";
 import { IoSearch } from "react-icons/io5";
+import {useAuth} from "../../hooks/auth"
 
 export function Header (){
+    const {signOut} = useAuth();
     return(
         <Container>
     
@@ -14,7 +16,7 @@ export function Header (){
     </svg> Food Explorer</h2>
     <Input placeholder="Busque por pratos ou ingredientes" icon={IoSearch} />
     <Button>  <BsReceiptCutoff class="receiptIcon"/> Pedidos (0) </Button>
-    <button class="signOutButton"> <PiSignOutLight/> </button>
+    <button class="signOutButton" onClick={signOut}> <PiSignOutLight/> </button>
     
         </Container>
     )
